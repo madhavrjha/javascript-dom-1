@@ -179,3 +179,74 @@
 // container.insertBefore(newDiv, h1);
 
 // console.log(newDiv);
+
+// CLICK EVENT
+
+// document.getElementById('button').addEventListener('click', (e) => {
+//     document.getElementById('header-title').textContent = 'Changed';
+//     document.querySelector('#main').style.backgroundColor = '#f4f4f4';
+//     console.log(e);
+//     console.log(e.target);
+//     console.log(e.target.id);
+//     console.log(e.target.className);
+//     console.log(e.target.classList);
+
+//     const output = document.querySelector('#output');
+//     output.innerHTML = `<h3>${e.target.className}</h3>`;
+
+//     console.log(e.type);
+//     console.log(e.clientX, e.clientY);
+//     console.log(e.offsetX, e.offsetY);
+
+//     console.log(e.altKey); // ALT + CLICK => TRUE | CLICK => FALSE
+//     console.log(e.ctrlKey); // CTRL + CLICK => TRUE | CLICK => FALSE
+//     console.log(e.shiftKey); // SHIFT + CLICK => TRUE | CLICK => FALSE
+// });
+
+const button = document.querySelector('#button');
+const box = document.querySelector('#box');
+const output = document.querySelector('#output');
+const itemInput = document.querySelector('input[type="text"]');
+const form = document.querySelector('form');
+const select = document.querySelector('select');
+
+// button.addEventListener('click', runEvent);
+// button.addEventListener('dblclick', runEvent);
+// button.addEventListener('mousedown', runEvent);
+// button.addEventListener('mouseup', runEvent);
+
+// box.addEventListener('mouseenter', runEvent);
+// box.addEventListener('mouseleave', runEvent);
+
+// box.addEventListener('mouseover', runEvent); // Only Over the Box Element Excluding Child Element
+// box.addEventListener('mouseout', runEvent); // Only Out the Box Element Excluding Child Element
+
+// box.addEventListener('mousemove', runEvent);
+
+// itemInput.addEventListener('keydown', runEvent);
+// itemInput.addEventListener('keyup', runEvent);
+// itemInput.addEventListener('keypress', runEvent);
+
+// itemInput.addEventListener('focus', runEvent);
+// itemInput.addEventListener('blur', runEvent);
+
+// itemInput.addEventListener('cut', runEvent);
+// itemInput.addEventListener('paste', runEvent);
+
+// itemInput.addEventListener('input', runEvent); // Input on TextBox, MailBox, Etc.
+
+// select.addEventListener('change', runEvent);
+// select.addEventListener('input', runEvent);
+
+form.addEventListener('submit', runEvent);
+
+function runEvent(e) {
+    // console.log(e);
+    e.preventDefault();
+    console.log(`EVENT TYPE: ${e.type}`);
+    // document.body.style.display = 'none';
+    // console.log(e.target.value + e.key);
+    // output.innerHTML = `<h3>${e.target.value + e.key}</h3>`;
+    // output.innerHTML = `<h3>X: ${e.offsetX} <br> Y: ${e.offsetY}</h3>`;
+    // document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+}
